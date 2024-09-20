@@ -133,7 +133,7 @@ jobs:
         run: |
           curl -L -o patcher https://github.com/amsyarasyiq/bunny-ipa-patcher/releases/download/release-pyon/patcher.mac-amd64
           chmod +x patcher
-          patcher -d ${{ github.workspace }}/${{ env.APP_NAME }}.ipa -o ${{ github.workspace }}/${{ env.APP_NAME }}.ipa -i ./ipa-icons.zip
+          ./patcher -d ${{ github.workspace }}/${{ env.APP_NAME }}.ipa -o ${{ github.workspace }}/${{ env.APP_NAME }}.ipa -i ./ipa-icons.zip
 
       - name: Upload ipa as artifact
         uses: actions/upload-artifact@v4
